@@ -62,10 +62,6 @@ To run the project navigate to webapp module directory and execute:
 
     $ mvn jetty:run
 
-If you rather preffer to run the application on Tomcat execute:
-
-    $ mvn tomcat:run
-
 ### Functional Testing
 
 The functional tests module allows you to run tests against the real application deployed on real container instead of
@@ -83,15 +79,6 @@ module directory:
 Or you can build normally the application, navigate to functional tests module directory and execute:
 
     $ mvn verify
-
-By default functional tests are executed on Jetty 6 container. If you
-rather want to use Tomcat execute one of the following:
-
-    $ mvn install -Pfunctional-tests,tomcat6x
-
-or
-
-    $ mvn verify -Ptomcat6x 
 
 Note that in order to run functional tests you need to have your
 application installed in local repository.
