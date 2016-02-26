@@ -17,18 +17,19 @@ Get the project from github using git clone. Navigate to root directory and exec
 
     $ mvn install
 
-Navigate to webapp directory and execute the following command
+Navigate to webapp directory and execute the following command:
+
     $ mvn jetty:run
 
 
-### UI
+## UI
 
     *Navigate to http://localhost:8080/pizzarest/pages/index.html in your browser
     *Click on Manager link to create Toppings and Base
     *After creating toppings and base click on order link to place orders
 
 
-### Design
+## Design
 
     Entities
         *CustomerOrder
@@ -41,8 +42,11 @@ Navigate to webapp directory and execute the following command
         *ToppingsController
         *BasesController
 
-
-
+## TODO
+    Add Payment System workflow
+    Orders with multiple Pizzas and other options
+    Ability to Add Coupons
+    Manager Authentication
 
 
 Note to create master data before placing an order.
