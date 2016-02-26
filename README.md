@@ -28,12 +28,11 @@ Navigate to webapp directory and execute the following command:
     *Click on Manager link to create Toppings and Base
     *After creating toppings and base click on order link to place orders
 
-
 ## Design
 
     Entities
         *CustomerOrder
-        *CustmerOrderDetail
+        *CustomerOrderDetail
         *Base
         *Topping
 
@@ -47,6 +46,5 @@ Navigate to webapp directory and execute the following command:
     Orders with multiple Pizzas and other options
     Ability to Add Coupons
     Manager Authentication
+    Data Validations
 
-
-Note to create master data before placing an order.
