@@ -1,4 +1,7 @@
 <div style="padding:1em;">
+    <div class="alert alert-warning" ng-if="errors">
+        <p ng-repeat="e in errors">{{e}}</p>
+    </div>
     <div>
         <label>Base</label>
         <select class="form-control" ng-model="model.orderDetail.base" style="width:10em;">

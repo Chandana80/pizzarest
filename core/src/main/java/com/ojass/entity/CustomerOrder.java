@@ -1,6 +1,7 @@
 package com.ojass.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 
 @Entity
@@ -23,6 +24,7 @@ public class CustomerOrder {
     private CustomerOrderDetail orderDetail;
 
     @Column
+    @Min(1)
     private int qty;
 
     public CustomerOrder() {

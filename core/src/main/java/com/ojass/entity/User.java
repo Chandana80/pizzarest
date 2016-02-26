@@ -1,6 +1,7 @@
 package com.ojass.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class User {
@@ -10,9 +11,11 @@ public class User {
     private Long id;
 
     @Column
+    @NotNull
     private String firstName;
 
     @Column
+    @NotNull
     private String lastName;
 
     public User() {

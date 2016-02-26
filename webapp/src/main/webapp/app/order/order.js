@@ -71,7 +71,7 @@ angular.module('myApp.order', ['ngRoute'])
         $scope.model.orderDetail.base.id = $scope.base.id;
         $scope.model.orderDetail.toppings = $scope.selectedToppings;
         $scope.model.orderDetail.total = $scope.model.total;
-
+        $scope.errors = null;
         $http({
             method: 'POST',
             url: '/pizzarest/orders/',
@@ -81,7 +81,12 @@ angular.module('myApp.order', ['ngRoute'])
                 "Content-Type": "application/json"
             }
         }).then(function successCallback(response) {
-            alert("Your order has been placed successfully");
+            if (response.data.errors) {
+                $scope.errors = response.data.errors;
+            } else {
+
+                alert("Your order has been placed successfully");
+            }
         }, function errorCallback(response) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
