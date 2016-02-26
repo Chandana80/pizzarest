@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pizzarest.iml" filepath="$PROJECT_DIR$/pizzarest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/pizzarest-core.iml" filepath="$PROJECT_DIR$/core/pizzarest-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/functional-tests/pizzarest-functional-tests.iml" filepath="$PROJECT_DIR$/functional-tests/pizzarest-functional-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webapp/pizzarest-webapp.iml" filepath="$PROJECT_DIR$/webapp/pizzarest-webapp.iml" />
+    </modules>
+  </component>
+</project>

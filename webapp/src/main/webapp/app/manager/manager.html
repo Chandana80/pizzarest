@@ -1,0 +1,91 @@
+<button type="button" class="btn" ng-click="getToppings()">Manage Toppings</button>
+<button type="button" class="btn" ng-click="getBases()">Manage Bases</button>
+<br/>
+<br/>
+<br/>
+<div ng-if="type == 'toppings'">
+  <table>
+      <tr>
+          <td style="padding: 0.5em; background-color: #5bc0de">Name</td>
+          <td style="padding: 0.5em; background-color: #5bc0de">Quantity</td>
+          <td style="padding: 0.5em; background-color: #5bc0de">Quantity Per Serving(in cups)</td>
+          <td style="padding: 0.5em; background-color: #5bc0de">Price Per Serving(in dollars)</td>
+          <td style="padding: 0.5em; background-color: #5bc0de" colspan="2">Actions</td>
+      </tr>
+    <tr ng-repeat="t in toppings">
+      <td style="padding: 0.5em">{{t.name}}</td>
+      <td style="padding: 0.5em">{{t.qty}}</td>
+      <td style="padding: 0.5em">{{t.qtyPerServing}}</td>
+      <td style="padding: 0.5em">{{t.pricePerServing}}</td>
+      <td style="padding: 0.5em"><a ng-click="showDetails(t)">Edit</a></td>
+      <td style="padding: 0.5em"><a ng-click="deleteTopping(t)">Delete</a></td>
+    </tr>
+  </table>
+  <br/>
+  <button type="button" class="btn" ng-click="createTopping()">Add Toppings</button>
+  <br/>
+  <div ng-if="showFields" class="fields col-md-5 col-sm-12 col-lg-4">
+    <div>
+      <label>Name</label>
+      <input type="text" class="form-control" ng-model="model.name">
+    </div>
+    <div>
+      <label >Quantity</label>
+      <input type="text" class="form-control" ng-model="model.qty">
+    </div>
+    <div>
+      <label >Serving Size</label>
+      <input type="text" class="form-control" ng-model="model.qtyPerServing">
+    </div>
+    <div>
+      <label >Price/Serving</label>
+      <input type="text" class="form-control" ng-model="model.pricePerServing">
+    </div>
+    <div class="control-box">
+      <button class="btn btn-success" ng-if="model.id" ng-click="editTopping()"> Save </button>
+      <button class="btn btn-warning" ng-if="!model.id" ng-click="addTopping()"> Create </button>
+      <button class="btn btn-danger"  ng-click="cancel()"> Cancel </button>
+    </div>
+
+  </div>
+</div>
+
+<div ng-if="type == 'bases'">
+  <table>
+      <tr>
+          <td style="padding: 0.5em; background-color: #5bc0de">Name</td>
+          <td style="padding: 0.5em; background-color: #5bc0de">Quantity(in numbers)</td>
+          <td style="padding: 0.5em; background-color: #5bc0de">Price(in dollars)</td>
+          <td style="padding: 0.5em; background-color: #5bc0de">Actions</td>
+      </tr>
+      <tr ng-repeat="t in bases">
+        <td style="padding: 0.5em">{{t.name}}</td>
+        <td style="padding: 0.5em">{{t.qty}}</td>
+        <td style="padding: 0.5em">{{t.price}}</td>
+        <td style="padding: 0.5em"><a ng-click="showBaseDetails(t)">Edit</a></td>
+      </tr>
+  </table>
+  <br/>
+  <button type="button" class="btn" ng-click="createBase()">Add Base</button>
+  <br/>
+  <div ng-if="showFields" class="fields col-md-5 col-sm-12 col-lg-4">
+    <div>
+      <label>Name</label>
+      <input type="text" class="form-control" ng-model="model.name">
+    </div>
+    <div>
+      <label >Quantity</label>
+      <input type="text" class="form-control" ng-model="model.qty">
+    </div>
+    <div>
+      <label>Price</label>
+      <input type="text" class="form-control" ng-model="model.price">
+    </div>
+    <div class="control-box">
+      <button class="btn btn-success" ng-if="model.id" ng-click="editBase()"> Save </button>
+      <button class="btn btn-warning" ng-if="!model.id" ng-click="addBase()"> Create </button>
+      <button class="btn btn-danger"  ng-click="cancel()"> Cancel </button>
+    </div>
+
+  </div>
+</div>

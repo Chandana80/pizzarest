@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pizzarest-webapp:war">
+    <output-path>$PROJECT_DIR$/webapp/target</output-path>
+    <root id="archive" name="pizzarest.war">
+      <element id="artifact" artifact-name="pizzarest-webapp:war exploded" />
+    </root>
+  </artifact>
+</component>

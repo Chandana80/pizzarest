@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1411064013">
+    <data-source source="LOCAL" name="HSQLDB (Local) - ~" uuid="d07c5f16-c87a-49ac-8907-45e4f89a418e">
+      <driver-ref>hsqldb.local</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
+      <jdbc-url>jdbc:hsqldb:file:~/pizzadb</jdbc-url>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+<div style="padding:1em;">
+    <div>
+        <label>Base</label>
+        <select class="form-control" ng-model="model.orderDetail.base" style="width:10em;">
+            <option value="{{base.id}}">{{base.name}}</option>
+        </select>
+    </div>
+    <div>
+        <div class="checkbox" ng-repeat="topping in toppings" >
+            <label><input type="checkbox" id="{{topping.id}}" value="{{topping.id}}" ng-click="updateDetails(topping)">{{topping.name}}</label>
+        </div>
+    </div>
+    <div>
+        <label>Contact No</label>
+        <input type="text" class="form-control" ng-model="model.contact" style="width:10em;">
+    </div>
+    <div>
+        <label>Contact Name</label>
+        <input type="text" class="form-control" ng-model="model.name" style="width:10em;">
+    </div>
+    <div>
+        <label>Qty</label>
+        <input type="text" class="form-control" ng-model="model.qty" readonly style="width:10em;">
+    </div>
+    <div>
+        <label>Total</label>
+        <input type="text" class="form-control" ng-model="model.total" readonly style="width:10em;">
+    </div>
+    <br/>
+    <div class="control-box">
+        <button class="btn btn-success" ng-click="addOrder()"> Create </button>
+        <button class="btn btn-danger"  ng-click="cancel()"> Cancel </button>
+    </div>
+</div>

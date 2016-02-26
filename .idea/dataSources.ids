@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="HSQLDB (Local) - ~" uuid="d07c5f16-c87a-49ac-8907-45e4f89a418e">
+    <database-info product="HSQL Database Engine" version="2.3.2" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.2">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="PUBLIC"/>
+    <table name="BASE" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PRICE" sqlType="NUMERIC" precision="19" scale="2" nullable="true" jdbcType="2"/>
+      <column name="QTY" sqlType="INTEGER" precision="32" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="SYS_PK_10092" columns="ID"/>
+    </table>
+    <table name="TOPPING" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PRICEPERSERVING" sqlType="NUMERIC" precision="19" scale="2" nullable="true" jdbcType="2"/>
+      <column name="QTY" sqlType="NUMERIC" precision="19" scale="2" nullable="true" jdbcType="2"/>
+      <column name="QTYPERSERVING" sqlType="NUMERIC" precision="19" scale="2" nullable="true" jdbcType="2"/>
+      <primary-key name="SYS_PK_10118" columns="ID"/>
+    </table>
+    <table name="USER" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="FIRSTNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LASTNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="SYS_PK_10122" columns="ID"/>
+    </table>
+  </data-source>
+</component>
